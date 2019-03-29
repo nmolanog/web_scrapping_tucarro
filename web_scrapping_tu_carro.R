@@ -24,6 +24,8 @@ html_nodes(webpage,"ul.attribute-list")
 
 ##phones
 html_nodes(webpage,"span.profile-info-phone-value")%>%str_extract_all("[0-9]+")%>%{map(.,~paste0(.,collapse=""))}%>%unlist%>%paste0(collapse=";")
+##location
+html_nodes(webpage,"div.location-info")%>%{.[1]}%>%str_subset("vehículo")
 
 html_nodes(webpage,"li.specs-item")%>%html_nodes("strong")%>%html_text() 
 html_nodes(webpage,"li.specs-item")%>%html_nodes("span")%>%html_text()
