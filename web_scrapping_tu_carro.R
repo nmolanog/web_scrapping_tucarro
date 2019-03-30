@@ -28,6 +28,9 @@ html_nodes(webpage,"span.profile-info-phone-value")%>%str_extract_all("[0-9]+")%
 
 html_nodes(webpage,"div.location-info")%>%{.[1]}%>%html_text()%>%str_remove_all("\n|\t")
 html_nodes(webpage,"div.location-info")%>%html_text()%>%str_remove_all("\n|\t")
+###description
+html_nodes(webpage,"div.item-description__text")%>%html_text()%>%str_remove_all("\n|\t")
+
 
 html_nodes(webpage,"li.specs-item")%>%html_nodes("strong")%>%html_text() 
 html_nodes(webpage,"li.specs-item")%>%html_nodes("span")%>%html_nodes()
