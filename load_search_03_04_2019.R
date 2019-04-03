@@ -32,13 +32,11 @@ res_f1%>%filter(Único.dueño %in% "Sí")%>%
   filter(precio <60000000)%>%
   filter(placa_par)%>%
   filter(location %in% loc_bog_cun)%>%
+  filter(!Placa %in% c("RHU-514","COC-844"))%>%
   {.[order(.$Recorrido,.$Año,.$precio,decreasing = T),]}->res_f1_1
 
 res_f1$available<-NA
 res_f1$dir_meeting<-NA
 res_f1$contact_name<-NA
 
-res_f1[res_f1$http %in% "https://articulo.tucarro.com.co/MCO-508168090-chevrolet-luv-d-max-4x4-td-3000cc-mt-aa-_JM",c("available","dir_meeting","contact_name")]<-data.frame(available=T,dir_meeting="cr69d # 2-15 centroamerica",contact_name="Andres Gomez")
-res_f1[res_f1$http %in% "https://articulo.tucarro.com.co/MCO-504384355-chevrolet-luv-d-max-_JM",c("available","dir_meeting","contact_name")]<-data.frame(available=T,dir_meeting="cl67d bis # 67-22","maria pinzon")
-res_f1[res_f1$http %in% "https://articulo.tucarro.com.co/MCO-503566431-chevrolet-luv-d-max-_JM",c("available")]<-F
-
+#Spu766 lugar cr70c # 78a-03 de lunes a sabado, disponible
