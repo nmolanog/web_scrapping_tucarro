@@ -32,7 +32,7 @@ res_f1%>%filter(Único.dueño %in% "Sí")%>%
   filter(precio <60000000)%>%
   filter(placa_par)%>%
   filter(location %in% loc_bog_cun)%>%
-  filter(!Placa %in% c("RHU-514","COC-844"))%>%
+  filter(!Placa %in% c("RHU-514","COC-844","QIA010","OBI-928"))%>%
   {.[order(.$Recorrido,.$Año,.$precio,decreasing = T),]}->res_f1_1
 
 res_f1$available<-NA
