@@ -57,7 +57,8 @@ res_f1%>%filter(precio <60000000)%>%
   filter(!Versión %in% rm_vers)%>%
   filter(!descr %in% rm_descr)%>%
   filter(!http %in% rm_http)%>%
-  filter(!str_detect(phone,discard_list$phones%>%paste(collapse="|")))->res_f1_1
+  filter(!str_detect(phone,discard_list$phones%>%paste(collapse="|")))%>%
+  {.[order(.$Kilómetros,.$Año,.$precio,decreasing = T),]}->res_f1_1
 
 ###https://articulo.tucarro.com.co/MCO-509047450-chevrolet-luv-d-max-4x4-full-equipo-_JM
 ###available, disponible para peritaje
