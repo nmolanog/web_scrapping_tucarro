@@ -44,6 +44,7 @@ res_f1$contact_name<-NA
 ###peritaje en automax
 
 ###https://articulo.tucarro.com.co/MCO-509340837-chevrolet-luv-d-max-doble-cabina-4x4-mt-3000-_JM
-###https://articulo.tucarro.com.co/MCO-507892330-chevrolet-luv-d-max-_JM
 ##no contestan. volver a llamar
 
+###https://articulo.tucarro.com.co/MCO-507892330-chevrolet-luv-d-max-_JM
+##Ya contesto
