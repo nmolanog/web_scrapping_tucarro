@@ -9,7 +9,7 @@ library(xml2)
 library(rvest)
 library(stringr)
 list.files()%>%str_subset(".RData")
-load("search_09_05_2019.RData")
+load("search_20_05_2019.RData")
 load("discard_list.RData")
 summary(res)
 
@@ -59,6 +59,8 @@ res_f1%>%
   filter(!http %in% rm_http)%>%
   filter(!str_detect(phone,discard_list$phones%>%paste(collapse="|")))%>%
   {.[order(.$Kilómetros,.$Año,.$precio,decreasing = T),]}->res_f1_1
+
+res_f1_1%>%{.[order(.$Año,.$Kilómetros,.$precio, decreasing = T),]}%>%View()
 
 ###https://articulo.tucarro.com.co/MCO-509047450-chevrolet-luv-d-max-4x4-full-equipo-_JM
 ###available, disponible para peritaje

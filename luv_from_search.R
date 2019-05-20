@@ -50,7 +50,7 @@ res<-data.frame(matrix(NA,nfindings,length(atributes_vec),dimnames=list(c(), c(a
 for(i in seq_along(list_res)){
   res[i,list_res[[i]][,1]]<-list_res[[i]][,2]
 }
-save(res,file=paste0("search_09_05_2019",".RData"))
+save(res,file=paste0("search_20_05_2019",".RData"))
 
 wb <- openxlsx::createWorkbook()
 openxlsx::addWorksheet(wb, sheetName = 1)
